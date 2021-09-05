@@ -3,9 +3,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 import useCurrentLocation from './hooks/useCurrentLocation';
-// import useWatchLocation from './hooks/useWatchLocation';
-// import { geolocationOptions } from './constants/geolocationOptions';
 import Location from './components/Location';
+import Searchbar from './components/SearchBar/';
 
 function App() {
   const {
@@ -25,6 +24,7 @@ function App() {
         query={searchLocation}
         error={currentError}
       />
+      <Searchbar />
     </div>
   );
 }
