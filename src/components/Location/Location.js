@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Location = ({ location, error }) => {
+const Location = ({ location, weatherCurrentLocation, error }) => {
   return (
     <div>
       {location ? (
-        <code>
-          Latitude: {location.latitude}, Longitude: {location.longitude}
-        </code>
+        <div>
+          <code>
+            Latitude: {location.latitude}, Longitude: {location.longitude}
+          </code>
+          <p>weatherCurrentLocation: {weatherCurrentLocation}</p>
+        </div>
       ) : (
         <p>Loading...</p>
       )}
